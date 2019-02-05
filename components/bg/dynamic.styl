@@ -1,0 +1,17 @@
+@require '../../styles/variables'
+
+.container
+    position: absolute
+    left: 0
+    top: 0
+    height: 100vh
+    width: 100vw
+    overflow: hidden
+.background
+    background: url(../../files/img/bg.jpg) no-repeat center center
+    background-size: cover
+    height: 110vh
+    width: 110vw
+    will-change: transform
+    transform: translate3d(0,0,0) scale3d(1.1,1.1,1)
+    transition: transform .1s linear

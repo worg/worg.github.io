@@ -1,0 +1,22 @@
+@require '../styles/variables'
+
+.main-nav
+  position: relative
+  display: block
+  text-align: center
+  font-size: 1.1rem
+  background: rgba($bg, .9)
+  height: $nav-height
+  position: sticky
+  top: 0
+  z-index: 1
+  nav a
+    padding: 1rem .5rem
+    font-variant: all-small-caps common-ligatures
+    font-weight: bold
+    text-align: center
+    &:hover,&.active
+      &:after
+       transform: scale(1) translateY(-.8rem)
+    &.active
+      color: $brand-accent

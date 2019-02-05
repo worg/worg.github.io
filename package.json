@@ -1,0 +1,37 @@
+{
+  "name": "worg.xyz",
+  "description": "worg's personal website/blog",
+  "version": "2.0.0",
+  "author": "worg <hi[at]worg.xyz>",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "export": "next build && next export -o dist",
+    "start": "next start"
+  },
+  "devDependencies": {
+    "@zeit/next-stylus": "^1.0.1",
+    "autoprefixer": "^9.4.10",
+    "babel-eslint": "^10.0.1",
+    "classnames": "^2.2.6",
+    "css-mqpacker": "^7.0.0",
+    "eslint": "^5.13.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-react": "^7.12.4",
+    "file-loader": "^3.0.1",
+    "next": "^7.0.2",
+    "poststylus": "^1.0.0",
+    "prop-types": "^15.6.2",
+    "react": "^v16.8.0-alpha.1",
+    "react-dom": "^v16.8.0-alpha.1",
+    "react-ga": "^2.5.7",
+    "react-transition-group": "^2.6.0",
+    "stylus": "^0.54.5",
+    "url-loader": "^1.1.2"
+  },
+  "browserslist": [
+    "> 5% in US",
+    "> 10% in MX"
+  ]
+}

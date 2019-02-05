@@ -1,0 +1,17 @@
+@require '../styles/global'
+
+main
+  min-height: 100vh
+  &:not(:global(.full))
+    background: url(../files/img/bg.jpg) no-repeat center center
+    background-size: cover
+    .container:before
+      content: ''
+      display: block
+      position: absolute
+      width: 100vw
+      height: 100%
+      background: rgba($bg, .6)
+.container
+  margin: 0 auto;
+  position: relative

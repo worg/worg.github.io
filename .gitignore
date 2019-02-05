@@ -1,0 +1,7 @@
+.next
+node_modules
+*.log
+*.sublime-workspace
+/out
+/dist
+
