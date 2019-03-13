@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # Usage ./deploy.sh [tag] [message]
+export NODE_ENV='production'
 origin=$(git remote get-url origin) # get current repo remote
-branch='gh-pages';
+branch='master';
 defaultTag="build_$(date +'%Y%m%dT%H%M%S')";
 tag=${1:-$defaultTag}
-outDir='./out'
-
+outDir='./dist'
 echo "Creating Tag: $tag"
 
 # Generate static files
@@ -20,9 +20,9 @@ cd $outDir;
 git init;
 git checkout -b $branch;
 git remote add origin $origin;
-git tag -a $tag;
 git add -A .;
 git commit -m ${2:-$defaultTag};
-git push -f;
+git tag -a $tag -m ${2:-$defaultTag};
+git push -f -u origin $branch;
 echo 'done!';
 exit 0;
