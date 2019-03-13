@@ -18,7 +18,8 @@ if [ !-d $outDir ]; then
 fi
 cp ./CNAME $outDir
 cd $outDir;
-touch .nojekyll
+touch .nojekyll # Avoid skippink _next on GH pages 
+cp 404/index.html 404.html # Custom 404 everywhere
 git init;
 git config user.email $email
 git checkout -b $branch;
