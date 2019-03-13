@@ -17,6 +17,7 @@ if [ !-d $outDir ]; then
 fi
 cp ./CNAME $outDir
 cd $outDir;
+touch .nojekyll
 git init;
 git checkout -b $branch;
 git remote add origin $origin;
