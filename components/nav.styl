@@ -1,7 +1,6 @@
 @require '../styles/variables'
 
 .main-nav
-  position: relative
   display: block
   text-align: center
   font-size: 1.1rem
@@ -10,7 +9,10 @@
   position: sticky
   top: 0
   z-index: 1
-  nav a
+  nav
+    overflow-x: auto
+    white-space: nowrap
+  a
     padding: 1rem .5rem
     font-variant: all-small-caps common-ligatures
     font-weight: bold
