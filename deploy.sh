@@ -9,8 +9,9 @@ outDir='./dist'
 echo "Creating Tag: $tag"
 
 # Generate static files
+rm -fr "$outDir"
 yarn export;
-cd $outDir || exit 1; 
+cd "$outDir" || exit 1; 
 # Push to specified branch
 cp ../CNAME .
 touch .nojekyll # Avoid skipping _next on GH pages 
