@@ -9,19 +9,21 @@ const quotes = [
   'I write code for fun… and sometimes even for money',
 ];
 const timeout = 6e3;
-let lastCount = 0;
-const replaceQuote = (index, setQuote) => {
-  lastCount = index + 1 === quotes.length ? 0 : index + 1;
-  setQuote(lastCount);
+let currentIndex = 0;
+const getIndex = () => {
+  currentIndex = currentIndex + 1 === quotes.length ? 0 : currentIndex + 1;
+  return currentIndex;
 };
 const duration = 400;
 
 const Quotes = ({ className = '' }) => {
   const [i, setQuote] = useState(0);
   useEffect(() => {
-    const interval = setInterval(replaceQuote, timeout, i, setQuote);
-    return () => clearInterval(interval);
-  }, [i]);
+    const timer = setInterval(() => {
+      setQuote(getIndex());
+    }, timeout);
+    return () => clearInterval(timer);
+  }, [setQuote]);
   return (
     <div className={cn(s['full-width'], className)} >
       <div className={s.what}>
