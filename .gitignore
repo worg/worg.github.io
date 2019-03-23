@@ -4,4 +4,4 @@ node_modules
 *.sublime-workspace
 /out
 /dist
-
+.DS_*
