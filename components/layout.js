@@ -17,6 +17,8 @@ export default ({ children, title = 'Dreamer, Thinker, Lover & Coder', full = fa
       <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
       <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       <title>{ title }</title>
+      <meta name='description' content='Hiram J. Pérez, worg full stack developer in mexico city' />
+      <meta name='keywords' content='@worg, Hiram, Hiram J. Pérez, worg' />
       <meta name='theme-color' content='#1A1A1A' />
       <link rel='shortcut icon' href='/static/favicon.ico' />
       <link rel='manifest' href='/static/site.webmanifest' />
