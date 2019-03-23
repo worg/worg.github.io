@@ -5,7 +5,7 @@
   "author": "worg <hi[at]worg.xyz>",
   "license": "GPL-3.0-or-later",
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "build": "NODE_ENV='production' next build",
     "build:dist": "NODE_ENV='production' next export -o dist",
     "export": "yarn build && yarn build:dist",
@@ -32,7 +32,7 @@
     "url-loader": "^1.1.2"
   },
   "browserslist": [
-    "> 5% in US",
-    "> 10% in MX"
+    "last 2 version",
+    "not dead"
   ]
 }
