@@ -9,6 +9,9 @@
   position: sticky
   top: 0
   z-index: 1
+  @supports (backdrop-filter: none)
+    backdrop-filter: blur(1rem) brightness(.5) contrast(.9)
+    background: rgba($bg, .3)
   nav
     overflow-x: auto
     overflow-y: hidden
