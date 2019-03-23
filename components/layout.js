@@ -9,9 +9,7 @@ import css from './layout.styl';
 export default ({ children, title = 'Dreamer, Thinker, Lover & Coder', full = false, pathName }) => (
   <main className={full ? 'full' : undefined}>
     {useEffect(() => {
-      if (process.env.NODE_ENV !== 'development') {
         GA.initialize('UA-55201845-1');
-      }
     }, [])}
     {full && (<DynamicBg />)}
     <Head>
