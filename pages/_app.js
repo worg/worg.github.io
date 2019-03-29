@@ -1,6 +1,7 @@
-import React from 'react';
+import React  from 'react';
 import App, { Container } from 'next/app';
 import Layout from '../components/layout';
+import { pageview } from '../lib/ga';
 
 export default class MyApp extends App {
   static async getInitialProps({ Component, router, ctx }) { // eslint-disable-line no-unused-vars
@@ -11,6 +12,10 @@ export default class MyApp extends App {
     }
 
     return { pageProps };
+  }
+
+  componentDidMount() {
+    this.props.router.events.on('routeChangeComplete', url => pageview(url));
   }
 
   render() {

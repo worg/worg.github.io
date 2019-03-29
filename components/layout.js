@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
-import GA from 'react-ga';
+import { GA_TRACKING_ID } from '../lib/ga';
 import DynamicBg from './bg/dynamic';
 import Nav from './nav';
 
@@ -8,9 +8,6 @@ import css from './layout.styl';
 
 export default ({ children, title = 'Dreamer, Thinker, Lover & Coder', full = false, pathName }) => (
   <main className={full ? 'full' : undefined}>
-    {useEffect(() => {
-        GA.initialize('UA-55201845-1');
-    }, [])}
     {full && (<DynamicBg />)}
     <Head>
       <meta charSet='utf-8' />
@@ -37,6 +34,19 @@ export default ({ children, title = 'Dreamer, Thinker, Lover & Coder', full = fa
         sizes='16x16'
         href='/static/favicon-16x16.png' />
       <meta name='msapplication-TileColor' content='#1A1A1A' />
+      {/* Global Site Tag (gtag.js) - Google Analytics */}
+      <script
+        async={true}
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+      />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${GA_TRACKING_ID}');
+      ` }} />
     </Head>
     <Nav full={full} pathName={pathName} />
     <div className={css.container}>
