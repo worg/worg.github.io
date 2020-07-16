@@ -9,7 +9,7 @@ const About = () => {
       <section className={s.me}>
         My name is <em>Hiram</em> but most of my friends call me worg.<br />
         I'm a Full Stack Developer in Mexico City,<br />
-        I like to solve problems trough code.<br />
+        I like to solve problems through code.<br />
       </section>
       <section className={s.skills}>
         Nowadays I enjoy to develop Web UIs using React, modern JS and<br />

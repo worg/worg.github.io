@@ -20,6 +20,7 @@ module.exports = withStylus({
           limit: 1000,
           publicPath: '/_next/static',
           outputPath: `${!!options.isServer ? '../' : ''}static/`,
+          esModule: false,
         },
       },
     });

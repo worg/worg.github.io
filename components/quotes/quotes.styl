@@ -24,16 +24,16 @@
   transform: translateZ(0)
   transform-origin: center center
   transform-style: preserve-3d
-  transition: transform .35s $ease-pop, opacity .3s $ease-pop
+  transition: all .35s $ease-pop, opacity .3s $ease-pop
   will-change: transform
   &-entered
     opacity: 1
   &-entering
     opacity: 0
-    transform: scale(0.5) translate3d(0,100%,0)
+    transform: translate3d(0,100%,0)
   &-exiting, &-exited
     opacity: 0
-    transform: scale(0.5) translate3d(0,100%,0)
+    transform: translate3d(0,100%,0)
   // &-exited
   //   display: none
   //   // transform:  translate3d(-200%,0,0)
