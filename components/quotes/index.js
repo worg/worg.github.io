@@ -6,7 +6,7 @@ import s from './quotes.styl';
 
 const quotes = [
   'Full Stack Developer',
-  'I write code for fun… and sometimes even for money…',
+  'I write code for fun… and sometimes even for money.',
 ];
 const timeout = 6e3;
 let currentIndex = 0;
