@@ -1,23 +1,11 @@
-const withStylus = require('@zeit/next-stylus');
-const poststylus = require('poststylus');
-
-module.exports = withStylus({
-  cssModules: true,
-  stylusLoaderOptions: {
-    use: [
-      poststylus([
-        require('autoprefixer')(),
-        require('css-mqpacker')(),
-      ]),
-    ],
-  },
+module.exports = {
   webpack(config, options) {
     config.module.rules.push({
-      test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+      test: /\.(svg)$/,
       use: {
         loader: 'url-loader',
         options: {
-          limit: 1000,
+          limit: 100,
           publicPath: '/_next/static',
           outputPath: `${!!options.isServer ? '../' : ''}static/`,
           esModule: false,
@@ -27,4 +15,4 @@ module.exports = withStylus({
 
     return config;
   },
-});
+};

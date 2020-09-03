@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { withRouter } from 'next/router';
 import cn from 'classnames';
 
-import s from './nav.styl';
+import s from './nav.module.scss';
 
 const Nav = ({ full = false, pathName = '/' }) => (
   <header className={cn(s['main-nav'], { full })}>

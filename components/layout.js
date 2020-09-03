@@ -4,9 +4,9 @@ import { GA_TRACKING_ID } from '../lib/ga';
 import DynamicBg from './bg/dynamic';
 import Nav from './nav';
 
-import css from './layout.styl';
+import css from './layout.module.scss';
 
-export default ({ children, title = 'Dreamer, Thinker, Lover & Coder', full = false, pathName }) => (
+const Layout = ({ children, title = 'Dreamer, Thinker, Lover & Coder', full = false, pathName }) => (
   <main className={full ? 'full' : undefined}>
     {full && (<DynamicBg />)}
     <Head>
@@ -55,3 +55,5 @@ export default ({ children, title = 'Dreamer, Thinker, Lover & Coder', full = fa
       ` }} />
   </main>
 );
+
+export default Layout;

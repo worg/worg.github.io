@@ -1,0 +1,38 @@
+@import "../styles/variables.scss";
+
+.main-nav {
+  display: block;
+  text-align: center;
+  font-size: 1.1rem;
+  background: rgba($bg, 0.9);
+  height: $nav-height;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  @supports (backdrop-filter: none) {
+    backdrop-filter: blur(1rem) brightness(0.5) contrast(0.9);
+    background: rgba($bg, 0.3);
+  }
+
+  nav {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    a {
+      padding: 1rem 0.5rem;
+      font-variant: all-small-caps common-ligatures;
+      font-weight: bold;
+      text-align: center;
+      &:hover,
+      &.active {
+        &:after {
+          transform: scale(1) translateY(-0.8rem);
+        }
+      }
+    }
+  }
+  &.active {
+    color: $brand-accent;
+  }
+}

@@ -3,7 +3,9 @@ import App from 'next/app';
 import Layout from '../components/layout';
 import { pageview } from '../lib/ga';
 
-export default class MyApp extends App {
+import '../styles/global.scss';
+
+class MyApp extends App {
   componentDidMount() {
     this.props.router.events.on('routeChangeComplete', url => pageview(url));
   }
@@ -21,3 +23,5 @@ export default class MyApp extends App {
     );
   }
 }
+
+export default MyApp;

@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-import s from './_error.styl';
+import s from './_error.module.scss';
 
 const ErrorPage = () => {
   return (

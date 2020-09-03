@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import cssTx from '../utils/csstx';
 
-import s from './dynamic.styl';
+import s from './dynamic.module.scss';
 
 const effect = (e) => {
   const {

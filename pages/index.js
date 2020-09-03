@@ -1,7 +1,7 @@
 import React from 'react';
 import Quotes from '../components/quotes';
 
-import s from './index.styl';
+import s from './index.module.scss';
 
 import logo from '../files/img/worg.svg';
 

@@ -1,0 +1,36 @@
+@import "../../styles/variables";
+
+.container {
+  min-height: calc(100vh - #{$nav-height});
+
+  @media #{$mobile-md} {
+    padding: 2rem 0.5rem;
+
+    .me,
+    .contact {
+      font-size: 1.5rem;
+    }
+    .skills {
+      font-size: 1.35rem;
+    }
+  }
+  section {
+    margin: 0.8rem 0;
+    line-height: 2.8rem;
+    font-weight: normal;
+  }
+}
+
+.me,
+.contact {
+  font-size: 2.05rem;
+  text-shadow: 1px 1px 5px $bg, 1px 1px 0 $bg;
+  em {
+    font-weight: bold;
+    font-style: normal;
+  }
+}
+
+.skills {
+  font-size: 1.9rem;
+}

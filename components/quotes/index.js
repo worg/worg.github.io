@@ -2,28 +2,28 @@ import React, { useState, useEffect } from 'react';
 import Transition from 'react-transition-group/Transition';
 import cn from 'classnames';
 
-import s from './quotes.styl';
+import s from './quotes.module.scss';
 
 const quotes = [
   'Full Stack Developer',
   'I write code for fun… and sometimes even for money.',
 ];
 const timeout = 6e3;
-let currentIndex = 0;
-const getIndex = () => {
-  currentIndex = currentIndex + 1 === quotes.length ? 0 : currentIndex + 1;
-  return currentIndex;
-};
 const duration = 400;
+const getIndex = (currentIndex) => {
+  const newIndex = currentIndex + 1;
+  return newIndex === quotes.length ? 0 : newIndex;
+};
 
 const Quotes = ({ className = '' }) => {
   const [i, setQuote] = useState(0);
   useEffect(() => {
     const timer = setInterval(() => {
-      setQuote(getIndex());
+      setQuote(getIndex);
     }, timeout);
     return () => clearInterval(timer);
   }, [setQuote]);
+
   return (
     <div className={cn(s['full-width'], className)} >
       <div className={s.what}>

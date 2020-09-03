@@ -1,0 +1,49 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.full-width {
+  width: 100%;
+  overflow: hidden;
+}
+.what {
+  display: block;
+  margin: 0 auto;
+  max-width: 50vw;
+  height: 6rem;
+  position: relative;
+  @media #{$mobile-md} {
+    max-width: 80vw;
+    height: 8em;
+  }
+  @media #{$tablet-portrait} {
+    max-width: 90vw;
+  }
+  .quote {
+    @include center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 1;
+    transform: translateZ(0);
+    transform-origin: center center;
+    transform-style: preserve-3d;
+    transition: all 0.35s $ease-pop, opacity 0.3s $ease-pop;
+    will-change: transform;
+    &-entered {
+      opacity: 1;
+    }
+    &-entering {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+    &-exiting,
+    &-exited {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+    // &-exited{
+    //   display: none
+    //   // transform:  translate3d(-200%,0,0)
+    // }
+  }
+}

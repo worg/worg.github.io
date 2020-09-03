@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
 
-import s from './about.styl';
+import s from './about.module.scss';
 
 const About = () => {
   return (
