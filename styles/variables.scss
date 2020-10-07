@@ -1,8 +1,7 @@
-
-$bg: #1A1A1A;
-$fg: #F0F0F0;
-$accent: #FAFAFA;
-$brand: #3E2835;
+$bg: #1a1a1a;
+$fg: #f0f0f0;
+$accent: #fafafa;
+$brand: #3e2835;
 $brand-light: #7f5a76;
 $brand-dark: #661039;
 
@@ -12,13 +11,11 @@ $brand-dark: #661039;
 $brand-accent: #f15152;
 $brand-inv-accent: #58b09c;
 
-
 $ease-pop: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
 // Media Queries
 // $mobile-md = 'screen and (max-width 768px)'
-$mobile-md: 'screen and (max-width 768px)';
-$tablet-portrait: 'screen and (min-width 768px) and (orientation portrait)';
-
+$mobile-md: "screen and (max-width: 768px)";
+$tablet-portrait: "screen and (min-width: 768px) and (orientation: portrait)";
 
 $nav-height: 55px;
