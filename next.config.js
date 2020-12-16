@@ -1,4 +1,9 @@
-module.exports = {
+const withPreact = require('next-plugin-preact');
+
+module.exports = withPreact({
+  experimental: {
+    modern: true,
+  },
   webpack(config, options) {
     config.module.rules.push({
       test: /\.(svg)$/,
@@ -15,4 +20,4 @@ module.exports = {
 
     return config;
   },
-};
+});

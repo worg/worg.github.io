@@ -12,22 +12,30 @@
     "start": "next start"
   },
   "devDependencies": {
+    "@preact/compat": "^0.0.3",
     "babel-eslint": "^10.1.0",
     "classnames": "^2.2.6",
     "css-mqpacker": "^7.0.0",
-    "eslint": "^7.4.0",
+    "eslint": "^7.15.0",
     "eslint-plugin-babel": "^5.3.1",
-    "eslint-plugin-react": "^7.20.3",
-    "file-loader": "^6.0.0",
-    "next": "^9.4.4",
+    "eslint-plugin-react": "^7.21.5",
+    "file-loader": "^6.2.0",
+    "next": "^10.0.3",
+    "next-plugin-preact": "^3.0.3",
+    "preact": "^10.5.7",
+    "preact-render-to-string": "^5.1.12",
     "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react-ssr-prepass": "npm:preact-ssr-prepass",
     "react-transition-group": "^4.4.1",
-    "url-loader": "^4.1.0"
+    "sass": "^1.30.0",
+    "url-loader": "^4.1.1"
   },
   "browserslist": [
     "last 2 version",
     "not dead"
-  ]
+  ],
+  "dependencies": {
+    "react": "npm:@preact/compat",
+    "react-dom": "npm:@preact/compat"
+  }
 }
