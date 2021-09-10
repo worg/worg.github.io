@@ -1,4 +1,4 @@
-@import '_reset';
+@import "_reset";
 @import "variables";
 @import "fonts";
 @import "mixins";
@@ -72,8 +72,6 @@ a {
   }
 }
 
-
-
 main {
   min-height: 100vh;
   &:not(.full) {
@@ -81,4 +79,3 @@ main {
     background-size: cover;
   }
 }
-

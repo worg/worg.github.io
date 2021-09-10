@@ -1,17 +1,13 @@
-import React from 'react';
-import Quotes from '../components/quotes';
+import React from "react";
+import Quotes from "../components/quotes";
 
-import s from './index.module.scss';
+import s from "./index.module.scss";
 
-import logo from '../files/img/worg.svg';
+import logo from "../files/img/worg.svg";
 
 const index = () => (
   <div className={s.container}>
-    <img
-      className={s.logo}
-      alt='worg logo'
-      title='logo'
-      src={logo} />
+    <img className={s.logo} alt="worg logo" title="logo" src={logo} />
     <Quotes className={s.quotes} />
   </div>
 );

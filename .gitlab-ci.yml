@@ -2,18 +2,18 @@ image: node:latest
 
 cache:
   paths:
-  - node_modules/
-  - .yarn
+    - node_modules/
+    - .yarn
 
 pages:
   script:
-  - yarn global add node-gyp
-  - yarn
-  - export NODE_ENV='production'
-  - yarn export
-  - mv dist public
+    - yarn global add node-gyp
+    - yarn
+    - export NODE_ENV='production'
+    - yarn export
+    - mv dist public
   artifacts:
     paths:
-    - public
+      - public
   only:
-  - master
+    - master

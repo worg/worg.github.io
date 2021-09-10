@@ -1,21 +1,15 @@
-import React, { useEffect } from 'react';
-import cssTx from '../utils/csstx';
+import React, { useEffect } from "react";
+import cssTx from "../utils/csstx";
 
-import s from './dynamic.module.scss';
+import s from "./dynamic.module.scss";
 
 const effect = (e) => {
-  const {
-    screenY,
-    screenX,
-    gamma,
-    beta,
-    type,
-  } = e;
+  const { screenY, screenX, gamma, beta, type } = e;
   const target = document.getElementById(s.background);
   let x = 0;
   let y = 0;
 
-  if (type === 'mousemove') {
+  if (type === "mousemove") {
     [x, y] = [screenX, screenY];
   } else {
     const inc = 30;
@@ -32,13 +26,13 @@ const effect = (e) => {
 const Background = () => {
   useEffect(() => {
     if (window.innerWidth < 1025) {
-      window.addEventListener('deviceorientation', effect, { passive: true });
+      window.addEventListener("deviceorientation", effect, { passive: true });
     } else {
-      window.addEventListener('mousemove', effect, { passive: true });
+      window.addEventListener("mousemove", effect, { passive: true });
     }
     return () => {
-      window.removeEventListener('mousemove', effect);
-      window.removeEventListener('deviceorientation', effect);
+      window.removeEventListener("mousemove", effect);
+      window.removeEventListener("deviceorientation", effect);
     };
   }, []);
   return (
@@ -46,7 +40,8 @@ const Background = () => {
       <div
         id={s.background}
         onMouseMove={effect}
-        className={s.background}></div>
+        className={s.background}
+      ></div>
     </div>
   );
 };

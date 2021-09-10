@@ -1,4 +1,5 @@
-@import '../styles/variables';.main-nav {
+@import "../styles/variables";
+.main-nav {
   display: block;
   text-align: center;
   font-size: 1.1rem;
@@ -7,7 +8,7 @@
   position: sticky;
   top: 0;
   z-index: 1;
-  @Supports (backdrop-filter: none) {
+  @supports (backdrop-filter: none) {
     backdrop-filter: blur(1rem) brightness(0.5) contrast(0.9);
     background: rgba($bg, 0.3);
   }
@@ -20,11 +21,14 @@
     padding: 1rem 0.5rem;
     font-variant: all-small-caps common-ligatures;
     font-weight: bold;
-    text-align: center;&:hover, &.active {
+    text-align: center;
+    &:hover,
+    &.active {
       &:after {
         transform: scale(1) translateY(-0.8rem);
       }
-    }&.active {
+    }
+    &.active {
       color: $brand-accent;
     }
   }
