@@ -22,6 +22,6 @@ git remote add origin "$origin";
 git add -A .;
 git commit -m "${2:-$defaultTag};"
 git tag -a "$tag" -m "${2:-$defaultTag};"
-git push -f -u origin "$branch";
+git push --tags -f -u origin "$branch";
 echo 'done!';
 exit 0;
