@@ -15,7 +15,7 @@ const About = () => {
         <br />
       </section>
       <section className={s.skills}>
-        Nowadays I enjoy to develop Web UIs using React, modern JS and
+        Nowadays I enjoy to develop Web UIs using React, TypeScript and
         <br />
         write systems and CLI tools using Go or Bash.
         <br />
