@@ -6,8 +6,8 @@
   "license": "GPL-3.0-or-later",
   "scripts": {
     "dev": "next dev",
-    "build": "NODE_ENV='production' next build",
-    "build:dist": "NODE_ENV='production' next export -o dist",
+    "build": "NODE_OPTIONS='--openssl-legacy-provider' NODE_ENV='production' next build",
+    "build:dist": "NODE_OPTIONS='--openssl-legacy-provider' NODE_ENV='production' next export -o dist",
     "export": "npm run build && npm run build:dist",
     "lint:fix": "eslint --fix .",
     "start": "next start"
