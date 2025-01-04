@@ -10,11 +10,11 @@ echo "Creating Tag: $tag"
 
 # Generate static files
 rm -fr "$outDir"
-yarn export;
-cd "$outDir" || exit 1; 
+npm run export;
+cd "$outDir" || exit 1;
 # Push to specified branch
 cp ../CNAME .
-touch .nojekyll # Avoid skipping _next on GH pages 
+touch .nojekyll # Avoid skipping _next on GH pages
 cp 404/index.html 404.html # Custom 404 everywhere
 git init;
 git checkout -b "$branch";

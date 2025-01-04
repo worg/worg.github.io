@@ -8,7 +8,7 @@
     "dev": "next dev",
     "build": "NODE_ENV='production' next build",
     "build:dist": "NODE_ENV='production' next export -o dist",
-    "export": "yarn build && yarn build:dist",
+    "export": "npm run build && npm run build:dist",
     "start": "next start"
   },
   "devDependencies": {
