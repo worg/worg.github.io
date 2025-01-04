@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
-import Transition from "react-transition-group/Transition";
-import cn from "classnames";
+import React, { useState, useEffect } from 'react';
+import Transition from 'react-transition-group/Transition';
+import cn from 'classnames';
 
-import s from "./quotes.module.scss";
+import s from './quotes.module.scss';
 
 const quotes = [
-  "Full Stack Developer",
-  "I write code for fun… and sometimes even for money.",
+  'Full Stack Developer',
+  'I write code for fun… and sometimes even for money.',
 ];
 const timeout = 6e3;
 const duration = 400;
@@ -15,7 +15,7 @@ const getIndex = (currentIndex) => {
   return newIndex === quotes.length ? 0 : newIndex;
 };
 
-const Quotes = ({ className = "" }) => {
+const Quotes = ({ className = '' }) => {
   const [i, setQuote] = useState(0);
   useEffect(() => {
     const timer = setInterval(() => {
@@ -25,10 +25,11 @@ const Quotes = ({ className = "" }) => {
   }, [setQuote]);
 
   return (
-    <div className={cn(s["full-width"], className)}>
+    <div className={cn(s['full-width'], className)}>
       <div className={s.what}>
         {quotes.map((q, index) => (
-          <Transition in={index === i} key={index} timeout={duration}>
+          <Transition in={index === i} key={index}
+            timeout={duration}>
             {(status) => (
               <div className={cn(s.quote, s[`quote-${status}`])} key={index}>
                 <h1>{q}</h1>

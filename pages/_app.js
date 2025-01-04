@@ -1,13 +1,13 @@
-import React from "react";
-import App from "next/app";
-import Layout from "../components/layout";
-import { pageview, SITE_ID } from "../lib/stats";
+import React from 'react';
+import App from 'next/app';
+import Layout from '../components/layout';
+import { pageview, SITE_ID } from '../lib/stats';
 
-import "../styles/global.scss";
+import '../styles/global.scss';
 
 class MyApp extends App {
   componentDidMount() {
-    this.props.router.events.on("routeChangeComplete", pageview);
+    this.props.router.events.on('routeChangeComplete', pageview);
   }
 
   render() {
